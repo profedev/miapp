@@ -1,0 +1,19 @@
+<div>
+    <h3>subsection</h3> 
+    <button class="btn" style ="float:right;cursor: pointer;" (click)="mostrarTextArea()">Editar</button>
+  </div>
+
+
+  <p id="parrafo-1">{{parrafo1}}</p>
+
+  <textarea name="textarea-1" id="textarea-1" cols="30" rows="10" [ngStyle]="{'display':visible, 'width':'100%'}" (focusout)="ocultarTextArea()" 
+        [(ngModel)]="parrafo1">
+  </textarea>
+      
+    
+  <div *ngFor="let item of otrasSubsecciones" >
+      <h3>{{item.titulo}}</h3>
+      <p>{{item.texto}}</p>
+  </div>
+
+  
